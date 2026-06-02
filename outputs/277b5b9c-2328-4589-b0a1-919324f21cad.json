@@ -1,0 +1,94 @@
+{
+  "job_id": "277b5b9c-2328-4589-b0a1-919324f21cad",
+  "filename": "277b5b9c-2328-4589-b0a1-919324f21cad.pdf",
+  "doc_type": "Document",
+  "confidence": 17.4,
+  "metadata": {
+    "job_id": "277b5b9c-2328-4589-b0a1-919324f21cad",
+    "filename": "277b5b9c-2328-4589-b0a1-919324f21cad.pdf",
+    "filesize": 399319,
+    "sha256": "a5c19a55483d7c565360e9984a7a33e92ed4d85fd1bb340b12f57fcc3b0a67ee",
+    "mimetype": "application/pdf",
+    "page_count": 1,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-06-02T12:43:01.640264",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": true,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 3,
+    "text_chars": 0,
+    "tables_count": 1
+  },
+  "key_values": {},
+  "entities": [],
+  "tables": [
+    {
+      "page": 1,
+      "title": "Table on page 1",
+      "headers": [
+        ""
+      ],
+      "rows": [
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ]
+      ]
+    }
+  ],
+  "summary": "No text could be extracted from this document.",
+  "images": [
+    {
+      "filename": "277b5b9c-2328-4589-b0a1-919324f21cad_p1_1.png",
+      "url": "/outputs/images/277b5b9c-2328-4589-b0a1-919324f21cad_p1_1.png",
+      "page": 1,
+      "width": 568,
+      "height": 110,
+      "caption": "",
+      "index": 1
+    },
+    {
+      "filename": "277b5b9c-2328-4589-b0a1-919324f21cad_p1_2.png",
+      "url": "/outputs/images/277b5b9c-2328-4589-b0a1-919324f21cad_p1_2.png",
+      "page": 1,
+      "width": 161,
+      "height": 188,
+      "caption": "",
+      "index": 2
+    },
+    {
+      "filename": "277b5b9c-2328-4589-b0a1-919324f21cad_p1_3.png",
+      "url": "/outputs/images/277b5b9c-2328-4589-b0a1-919324f21cad_p1_3.png",
+      "page": 1,
+      "width": 261,
+      "height": 78,
+      "caption": "",
+      "index": 3
+    }
+  ],
+  "full_text": ""
+}

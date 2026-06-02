@@ -1,0 +1,165 @@
+{
+  "job_id": "599e9d5c-3dcf-4837-aa20-c0381daccf22",
+  "filename": "599e9d5c-3dcf-4837-aa20-c0381daccf22.pdf",
+  "doc_type": "Marksheet",
+  "confidence": 82.4,
+  "metadata": {
+    "job_id": "599e9d5c-3dcf-4837-aa20-c0381daccf22",
+    "filename": "599e9d5c-3dcf-4837-aa20-c0381daccf22.pdf",
+    "filesize": 40259,
+    "sha256": "413eb9c7fdb772f3868f65b9ea81a3c91aca6ffdb943855979cc2909e7e6df45",
+    "mimetype": "application/pdf",
+    "page_count": 1,
+    "has_native": true,
+    "is_hybrid": true,
+    "doc_type": "Marksheet",
+    "processed_at": "2026-05-29T08:00:33.651985",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": true,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 1,
+    "text_chars": 1387,
+    "tables_count": 3
+  },
+  "key_values": {
+    "Date": "13/05/2025",
+    "Total Amount": "132495.00",
+    "Subtotal": "132495.00",
+    "GSTIN": "29AAFCA7290J1Z8",
+    "Email": "fees@alliance.edu.in",
+    "Student Name": "AKASH T App",
+    "Register Number": "2411021061249"
+  },
+  "entities": [
+    {
+      "text": "fees@alliance.edu.in",
+      "type": "EMAIL",
+      "start": 267,
+      "end": 287
+    },
+    {
+      "text": "29AAFCA7290J1Z8",
+      "type": "GST",
+      "start": 295,
+      "end": 310
+    },
+    {
+      "text": "INR\n1",
+      "type": "MONEY",
+      "start": 580,
+      "end": 585
+    },
+    {
+      "text": "13/05/2025",
+      "type": "DATE",
+      "start": 351,
+      "end": 361
+    },
+    {
+      "text": "562106",
+      "type": "PINCODE",
+      "start": 90,
+      "end": 96
+    },
+    {
+      "text": "560076",
+      "type": "PINCODE",
+      "start": 187,
+      "end": 193
+    },
+    {
+      "text": "107495",
+      "type": "PINCODE",
+      "start": 657,
+      "end": 663
+    },
+    {
+      "text": "132495",
+      "type": "PINCODE",
+      "start": 676,
+      "end": 682
+    }
+  ],
+  "tables": [
+    {
+      "page": 1,
+      "title": "Table on page 1",
+      "headers": [
+        "Sl No.",
+        "Particulars",
+        "INR"
+      ],
+      "rows": [
+        [
+          "1\n2\n3",
+          "Examination Fee\nSpecial Skill Lab Fee\nTuition Fee\nSUBTOTAL\nSGST @ 9%\nCGST @ 9%\nIGST @ 18%\nTOTAL AMOUNT",
+          "5000.00\n20000.00\n107495.00"
+        ],
+        [
+          "",
+          "",
+          "132495.00\n0.00\n0.00\n0.00"
+        ],
+        [
+          "",
+          "",
+          "132495.00"
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "title": "Line Items",
+      "headers": [
+        "Description",
+        "Amount (₹)"
+      ],
+      "rows": [
+        [
+          "1 Examination Fee",
+          "5000.00"
+        ],
+        [
+          "2 Special Skill Lab Fee",
+          "20000.00"
+        ],
+        [
+          "3 Tuition Fee",
+          "107495.00"
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "title": "Totals / Summary",
+      "headers": [
+        "Item",
+        "Amount"
+      ],
+      "rows": [
+        [
+          "SUBTOTAL",
+          "132495.00"
+        ]
+      ]
+    }
+  ],
+  "summary": "This is a Marksheet document. Student: AKASH T App. Register No: 2411021061249. Dated: 13/05/2025. Total: 132495.00. Email: fees@alliance.edu.in.",
+  "images": [
+    {
+      "filename": "599e9d5c-3dcf-4837-aa20-c0381daccf22_p1_1.png",
+      "url": "/outputs/images/599e9d5c-3dcf-4837-aa20-c0381daccf22_p1_1.png",
+      "page": 1,
+      "width": 791,
+      "height": 152,
+      "caption": "Extracted image — page 1",
+      "index": 1
+    }
+  ],
+  "full_text": "--- Page 1 ---\nCentral Campus: Chikkahagade Cross, Chandapura-Anekal Main Road, Bangalore-562106, Karnataka, India\nCity Campus: 19th Cross, 7th Main, BTM 2nd Stage, N.S. Palya, Bangalore-560076, Karnataka, India\nTel.: +91 80 4619 9093/9094| Fax: 080-46199099 E-mail: fees@alliance.edu.in\nGSTIN: 29AAFCA7290J1Z8\nRECEIPT\nReceipt No: 2025-26/07210 Date: 13/05/2025\nName: AKASH T App.No.: 2407776\nGender: MALE Batch: 2024-28\nProgram: B.Tech. in Artificial Intelligence and Machine Admission No: AU/UG/24/22963\nLearning\nRegister Number: 2411021061249 Installment: 2\nSl No. Particulars INR\n1 Examination Fee 5000.00\n2 Special Skill Lab Fee 20000.00\n3 Tuition Fee 107495.00\nSUBTOTAL 132495.00\nSGST @ 9% 0.00\nCGST @ 9% 0.00\nIGST @ 18% 0.00\nTOTAL AMOUNT 132495.00\nPayment Mode: PAYU PORTAL\nDD/UTR/NEFT/RTGS No: ASAC314798\nTransaction Date(RTGS/NEFT): 13/05/2025\nAmount in words: One Lakh Thirty Two Thousand Four Hundred Ninety Five Rupees Only\nFor Alliance University\nAuthorized Signatory\nTHIS IS A COMPUTER-GENERATED STATEMENT AND DOES NOT REQUIRE A PHYSICAL SIGNATURE\nDisclaimer: Alliance University is not responsible for any inadvertent error that may have crept in the above statements.\nAlliance University reserves the right to correct the mistake, if any, at any point during the academic year. Rules and\nregulations of the University are issued as per University orders from time to time"
+}

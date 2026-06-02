@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocIntel — Intelligent Document Processing Pipeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--accent)"/><rect x="14" y="1" width="10" height="10" rx="2" fill="var(--accent2)" opacity=".75"/><rect x="1" y="14" width="10" height="10" rx="2" fill="var(--accent3)" opacity=".55"/><rect x="14" y="14" width="10" height="10" rx="2" fill="var(--accent)" opacity=".3"/></svg></div>
+    <span class="logo-text">DocIntel</span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">PIPELINE</div>
+    <a class="nav-item active" data-view="upload"    onclick="switchView('upload',this)"><span class="ni">↑</span>Upload Documents</a>
+    <a class="nav-item"        data-view="pipeline"  onclick="switchView('pipeline',this)"><span class="ni">⟳</span>Live Pipeline</a>
+    <a class="nav-item"        data-view="results"   onclick="switchView('results',this)"><span class="ni">▤</span>Results Viewer</a>
+    <a class="nav-item"        data-view="search"    onclick="switchView('search',this)"><span class="ni">⌕</span>Search & Chat</a>
+    <div class="nav-section-label">MANAGE</div>
+    <a class="nav-item"        data-view="documents" onclick="switchView('documents',this)"><span class="ni">☰</span>Documents</a>
+    <a class="nav-item"        data-view="analytics" onclick="switchView('analytics',this)"><span class="ni">⎍</span>Analytics</a>
+    <a class="nav-item"        data-view="settings"  onclick="switchView('settings',this)"><span class="ni">⚙</span>Settings & Roles</a>
+    <div class="nav-section-label">SYSTEM</div>
+    <a class="nav-item"        data-view="monitoring" onclick="switchView('monitoring',this)"><span class="ni">◉</span>Monitoring</a>
+    <a class="nav-item"        data-view="review"    onclick="switchView('review',this)"><span class="ni">✎</span>Review Queue <span class="rv-badge" id="rvBadge" style="display:none">0</span></a>
+    <a class="nav-item"        data-view="feedback"  onclick="switchView('feedback',this)"><span class="ni">↻</span>Feedback Loop</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="sys-status"><div class="sdot" id="sysDot"></div><span id="sysLabel">Checking…</span></div>
+    <div class="ver-tag">v2.5.0 · Enterprise</div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main-content">
+  <header class="topbar">
+    <div class="tb-left">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <div class="breadcrumb" id="breadcrumb">Upload Documents</div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-stats">
+        <div class="tbs"><span class="tbs-v" id="ts-done">0</span><span class="tbs-l">Processed</span></div>
+        <div class="tbs"><span class="tbs-v" id="ts-running">0</span><span class="tbs-l">Running</span></div>
+        <div class="tbs"><span class="tbs-v" id="ts-conf">—</span><span class="tbs-l">Avg Conf</span></div>
+      </div>
+      <button class="notif-btn" id="notifBtn" onclick="toggleNotif()">🔔<span class="nbadge" id="nbadge" style="display:none">0</span></button>
+      <div class="avatar">DI</div>
+    </div>
+  </header>
+  <div class="notif-panel" id="notifPanel" style="display:none">
+    <div class="np-header">Notifications<button onclick="clearNotifs()" class="np-clear">Clear all</button></div>
+    <div class="np-list" id="npList"><div class="np-empty">No notifications</div></div>
+  </div>
+
+  <!-- ══ UPLOAD ══ -->
+  <div class="view active" id="view-upload">
+    <div class="vh"><h1>Document Upload</h1><p>Upload PDF, JPG, or PNG files. Real OCR + image extraction + AI processing via the 10-stage pipeline.</p></div>
+    <div class="upload-grid">
+      <div class="drop-zone" id="dropZone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+        <div class="dz-icon"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M26 14v16M18 22l8-8 8 8" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 36h20" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Drag & Drop Files Here</h3>
+        <p>PDF, JPG, PNG · Up to 100MB · Real OCR + Image extraction</p>
+        <div class="dz-btns">
+          <button class="btn-p" onclick="document.getElementById('fi').click()">Browse Files</button>
+          <button class="btn-s" onclick="document.getElementById('fi').click()">Batch Upload</button>
+        </div>
+        <input type="file" id="fi" multiple accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="handleFileSelect(event)">
+      </div>
+      <div class="up-config">
+        <h3 class="cfg-title">Processing Options</h3>
+        <div class="cfg-grp"><label>DOCUMENT TYPE</label>
+          <select id="cfgDocType"><option>Auto-Detect</option><option>Invoice</option><option>Resume</option><option>Contract</option><option>Receipt</option><option>Report</option><option>Form</option></select>
+        </div>
+        <div class="cfg-grp"><label>OCR ENGINE</label>
+          <select id="cfgOCR"><option value="tesseract">Auto (Best Quality)</option><option value="tesseract">Tesseract v5 LSTM</option><option value="tesseract_legacy">Tesseract Legacy</option></select>
+        </div>
+        <div class="cfg-grp"><label>OUTPUT FORMATS</label>
+          <div class="chk-grp">
+            <label class="chk"><input type="checkbox" checked id="outJSON"> Structured JSON</label>
+            <label class="chk"><input type="checkbox" checked id="outExcel"> Excel / CSV</label>
+            <label class="chk"><input type="checkbox" id="outPDF"> Full-text PDF</label>
+            <label class="chk"><input type="checkbox" checked id="outImages"> Extracted Images</label>
+          </div>
+        </div>
+        <div class="cfg-grp">
+          <label>CONFIDENCE THRESHOLD</label>
+          <div class="conf-slider-row">
+            <input type="range" min="50" max="99" value="85" id="cfgConfSlider" oninput="document.getElementById('cfgConfVal').textContent=this.value+'%'">
+            <span class="conf-val" id="cfgConfVal">85%</span>
+          </div>
+        </div>
+        <div class="cfg-grp"><label>AI FEATURES</label>
+          <div class="chk-grp">
+            <label class="chk"><input type="checkbox" checked> NER (Named Entities)</label>
+            <label class="chk"><input type="checkbox" checked> Document Classification</label>
+            <label class="chk"><input type="checkbox" checked> Key-Value Extraction</label>
+            <label class="chk"><input type="checkbox"> Signature Detection</label>
+            <label class="chk"><input type="checkbox" checked> Auto Summarization</label>
+          </div>
+        </div>
+        <button class="btn-p full" onclick="startUpload()" id="startBtn" disabled>Start Processing Pipeline</button>
+        <div class="api-note">⚡ FastAPI · Tesseract OCR · pdfplumber · OpenCV</div>
+      </div>
+    </div>
+    <div class="file-queue" id="fileQueue" style="display:none">
+      <div class="fq-header"><h3>Upload Queue</h3><div><button class="btn-g" onclick="clearQueue()">Clear</button><button class="btn-p" onclick="startUpload()">Process All →</button></div></div>
+      <div class="file-list" id="fileList"></div>
+    </div>
+  </div>
+
+  <!-- ══ PIPELINE ══ -->
+  <div class="view" id="view-pipeline">
+    <div class="vh"><h1>Live Pipeline Monitor</h1><p>Real-time job status across all 10 pipeline stages. Auto-refreshes every 2s.</p></div>
+    <div class="pipe-stats-row" id="pipeStatsRow"></div>
+    <div class="card mb20">
+      <div class="card-title">Pipeline Stages</div>
+      <div class="pipe-track" id="pipeTrack"></div>
+    </div>
+    <div class="card">
+      <div class="card-title-row"><span class="card-title">Jobs</span><button class="btn-g" onclick="loadJobs()">↻ Refresh</button></div>
+      <div class="table-wrap"><table class="dt" id="jobsTable">
+        <thead><tr><th>Job ID</th><th>File</th><th>Type</th><th>Stage</th><th>Progress</th><th>Confidence</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="jobsTbody"><tr><td colspan="8" class="empty">No jobs yet.</td></tr></tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <!-- ══ RESULTS ══ -->
+  <div class="view" id="view-results">
+    <div class="vh"><h1>Results Viewer</h1><p>Extracted text, tables, images, entities, key-values, and AI summaries.</p></div>
+    <div class="results-layout">
+      <div class="res-sidebar">
+        <div class="res-search"><input type="text" placeholder="Filter documents…" oninput="filterResDocs(this.value)"></div>
+        <div class="res-doc-list" id="resDocList"><div class="empty-sm">No results yet.</div></div>
+      </div>
+      <div class="res-detail" id="resDetail">
+        <div class="empty-center"><div class="ec-icon">📂</div><h3>Select a Document</h3><p>Choose from the list to view extracted data.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SEARCH & AI CHAT ══ -->
+  <div class="view" id="view-search">
+    <div class="vh"><h1>Search & Chat</h1><p>Semantic search across all processed documents. Ask questions in natural language.</p></div>
+    <div class="search-layout">
+      <div class="search-main">
+        <!-- Search bar -->
+        <div class="sbar-wrap">
+          <span class="sbar-icon">⌕</span>
+          <input type="text" id="searchInput" class="sbar-input" placeholder="Search documents or ask a question…" onkeydown="if(event.key==='Enter')doSearch()">
+          <button class="btn-p" onclick="doSearch()">Search</button>
+        </div>
+        <!-- Quick chips -->
+        <div class="chips">
+          <span class="chip" onclick="sendChatMsg('What is the total invoice amount?')">Invoices last month</span>
+          <span class="chip" onclick="sendChatMsg('Show high confidence contracts')">High confidence contracts</span>
+          <span class="chip" onclick="sendChatMsg('List handwritten documents')">Handwritten docs</span>
+          <span class="chip" onclick="sendChatMsg('What is the total fee paid?')">Total amounts</span>
+        </div>
+        <!-- Chat conversation -->
+        <div class="chat-container" id="chatContainer">
+          <div class="chat-msg assistant">
+            <div class="chat-av">AI</div>
+            <div class="chat-bubble">
+              Hello! I'm your document intelligence assistant. I can search across all your processed documents, answer questions about extracted data, and help you find specific information. Try asking me something like <strong>"What was the total invoice amount last week?"</strong>
+            </div>
+          </div>
+        </div>
+        <!-- Chat input -->
+        <div class="chat-input-bar">
+          <input type="text" id="chatInput" placeholder="Ask a question about your documents…" onkeydown="if(event.key==='Enter')sendChat()">
+          <button class="btn-p" onclick="sendChat()">Send</button>
+        </div>
+      </div>
+      <div class="search-filters">
+        <h4>Filters</h4>
+        <div class="fg">
+          <label>DOCUMENT TYPE</label>
+          <div class="chk-grp" style="margin-top:6px">
+            <label class="chk"><input type="checkbox" checked id="fAll" onchange="filterAll(this)"> All</label>
+            <label class="chk"><input type="checkbox" id="fInvoice"> Invoices</label>
+            <label class="chk"><input type="checkbox" id="fContract"> Contracts</label>
+            <label class="chk"><input type="checkbox" id="fResume"> Resumes</label>
+          </div>
+        </div>
+        <div class="fg"><label>DATE RANGE</label><select><option>All Time</option><option>Today</option><option>This Week</option><option>This Month</option></select></div>
+        <div class="fg"><label>CONFIDENCE</label><select id="fConf"><option>Any</option><option>High (&gt;90%)</option><option>Medium (70-90%)</option><option>Low (&lt;70%)</option></select></div>
+        <div class="fg"><label>HAS SIGNATURES</label><select><option>Any</option><option>Yes</option><option>No</option></select></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DOCUMENTS ══ -->
+  <div class="view" id="view-documents">
+    <div class="vh"><h1>Document Management</h1><p>Browse, filter, and manage all processed documents.</p></div>
+    <div class="docs-toolbar">
+      <input type="text" placeholder="Search documents…" class="docs-search" oninput="filterDocGrid(this.value)">
+      <select><option>All Types</option><option>Invoice</option><option>Contract</option><option>Resume</option><option>Receipt</option></select>
+      <button class="btn-g" onclick="loadDocGrid()">↻ Refresh</button>
+    </div>
+    <div class="doc-grid" id="docGrid"><div class="empty-center"><div class="ec-icon">📁</div><h3>No Documents Yet</h3><button class="btn-p" onclick="switchView('upload',null)">Upload Documents</button></div></div>
+  </div>
+
+  <!-- ══ ANALYTICS ══ -->
+  <div class="view" id="view-analytics">
+    <div class="vh"><h1>Analytics</h1><p>Live stats from the database.</p></div>
+    <div class="analytics-grid">
+      <div class="card wide"><div class="card-title">Processing Volume — Last 7 Days</div><canvas id="cVolume" height="110"></canvas></div>
+      <div class="card"><div class="card-title">Document Types</div><canvas id="cTypes" height="170"></canvas></div>
+      <div class="card"><div class="card-title">Confidence Distribution</div><canvas id="cConf" height="170"></canvas></div>
+      <div class="card"><div class="card-title">Summary Metrics</div><div id="summaryMetrics"></div></div>
+    </div>
+  </div>
+
+  <!-- ══ SETTINGS ══ -->
+  <div class="view" id="view-settings">
+    <div class="vh"><h1>Settings & Access Control</h1></div>
+    <div class="settings-layout">
+      <div class="stabs">
+        <button class="stab active" onclick="stab('pipeline',this)">Pipeline</button>
+        <button class="stab" onclick="stab('users',this)">Users & Roles</button>
+        <button class="stab" onclick="stab('security',this)">Security</button>
+        <button class="stab" onclick="stab('api',this)">API Keys</button>
+        <button class="stab" onclick="stab('storage',this)">Storage</button>
+      </div>
+      <div class="stab-content-wrap">
+        <div class="stab-pane active" id="sp-pipeline">
+          <div class="ss"><h4>OCR Configuration</h4>
+            <div class="sr"><div class="sri"><label>Primary OCR Engine</label><span>Engine for printed text extraction</span></div><select><option>Tesseract v5 LSTM</option><option>TrOCR</option><option>Google Vision</option></select></div>
+            <div class="sr"><div class="sri"><label>Confidence Threshold</label><span>Minimum confidence for auto-approval</span></div><div style="display:flex;align-items:center;gap:8px"><input type="number" value="85" min="50" max="99" style="width:70px"> %</div></div>
+            <div class="sr"><div class="sri"><label>Ensemble Voting</label><span>Combine multiple OCR engines for accuracy</span></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+          </div>
+          <div class="ss"><h4>Processing Limits</h4>
+            <div class="sr"><div class="sri"><label>Max File Size</label><span>Per file upload limit</span></div><select><option>100 MB</option><option>50 MB</option><option>200 MB</option></select></div>
+            <div class="sr"><div class="sri"><label>Parallel Workers</label><span>Concurrent processing threads</span></div><input type="number" value="8" min="1" max="32" style="width:80px"></div>
+            <div class="sr"><div class="sri"><label>Virus Scan</label><span>Scan all uploads for malware</span></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+            <div class="sr"><div class="sri"><label>SHA256 Duplicate Detection</label><span>Skip already-processed files</span></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+          </div>
+          <div class="ss"><h4>AI Features</h4>
+            <div class="sr"><div class="sri"><label>LLM Model</label><span>Model for document understanding</span></div><select><option>GPT-4o</option><option>Llama 3</option><option>Mistral</option></select></div>
+            <div class="sr"><div class="sri"><label>Auto-Summarization</label><span>Generate summaries for all docs</span></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+            <div class="sr"><div class="sri"><label>KV Extraction</label><span>Invoice, date, amount patterns</span></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+          </div>
+          <button class="btn-p" onclick="saveConfig()">Save Configuration</button>
+        </div>
+        <div class="stab-pane" id="sp-users">
+          <div class="ss"><h4>User Management</h4>
+            <table class="dt"><thead><tr><th>User</th><th>Email</th><th>Role</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Arjun Kumar</td><td>arjun@company.com</td><td><span class="rbadge admin">Admin</span></td><td><span class="sbadge active">Active</span></td><td><button class="btn-g-sm">Edit</button></td></tr>
+              <tr><td>Priya Sharma</td><td>priya@company.com</td><td><span class="rbadge editor">Editor</span></td><td><span class="sbadge active">Active</span></td><td><button class="btn-g-sm">Edit</button></td></tr>
+              <tr><td>Ravi Patel</td><td>ravi@company.com</td><td><span class="rbadge viewer">Viewer</span></td><td><span class="sbadge active">Active</span></td><td><button class="btn-g-sm">Edit</button></td></tr>
+            </tbody></table>
+            <button class="btn-s mt12">+ Invite User</button>
+          </div>
+        </div>
+        <div class="stab-pane" id="sp-security">
+          <div class="ss"><h4>Security</h4>
+            <div class="sr"><div class="sri"><label>RBAC Enabled</label></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+            <div class="sr"><div class="sri"><label>Audit Trail</label></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+            <div class="sr"><div class="sri"><label>Magic Bytes Scan</label></div><label class="tgl"><input type="checkbox" checked><span class="tgl-s"></span></label></div>
+          </div>
+        </div>
+        <div class="stab-pane" id="sp-api">
+          <div class="ss"><h4>API Endpoints</h4>
+            <div class="api-endpoints">
+              <div class="ep"><span class="ep-m post">POST</span><span class="ep-path">/api/upload</span><span class="ep-desc">Upload & process files</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/jobs</span><span class="ep-desc">List all jobs</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/results/{id}</span><span class="ep-desc">Full result with images</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/results/{id}/export/json</span><span class="ep-desc">Download JSON</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/results/{id}/export/csv</span><span class="ep-desc">Download CSV</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/search?q=...</span><span class="ep-desc">Full-text search</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/review/queue</span><span class="ep-desc">Human review queue</span></div>
+              <div class="ep"><span class="ep-m post">POST</span><span class="ep-path">/api/review/{id}</span><span class="ep-desc">Submit review + corrections</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/api/system/health</span><span class="ep-desc">CPU / memory / disk</span></div>
+              <div class="ep"><span class="ep-m get">GET</span><span class="ep-path">/docs</span><span class="ep-desc">Swagger UI</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="stab-pane" id="sp-storage">
+          <div class="ss"><h4>Storage</h4>
+            <div class="sr"><div class="sri"><label>Database</label></div><code>db/docintel.db</code></div>
+            <div class="sr"><div class="sri"><label>Uploads</label></div><code>uploads/</code></div>
+            <div class="sr"><div class="sri"><label>JSON Outputs</label></div><code>outputs/</code></div>
+            <div class="sr"><div class="sri"><label>Extracted Images</label></div><code>outputs/images/</code></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MONITORING ══ -->
+  <div class="view" id="view-monitoring">
+    <div class="vh"><h1>System Monitoring</h1><p>Live CPU, memory, disk from the real backend. Audit log from SQLite.</p></div>
+    <div class="mon-grid" id="monGrid"></div>
+    <div class="card mt20">
+      <div class="card-title-row"><span class="card-title">Audit Log</span><a href="/api/system/audit/export" class="btn-g">↓ Export CSV</a></div>
+      <div class="audit-log" id="auditLog"><div class="empty-sm">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- ══ REVIEW QUEUE ══ -->
+  <div class="view" id="view-review">
+    <div class="vh"><h1>Human Review Queue</h1><p>Documents with confidence below threshold. Review, correct, and approve or reject.</p></div>
+    <div class="rev-stats-row" id="revStatsRow"></div>
+    <div class="card">
+      <div class="card-title-row">
+        <span class="card-title">Pending Review</span>
+        <button class="btn-g" onclick="loadReviewQueue()">↻ Refresh</button>
+      </div>
+      <div id="reviewQueueList"><div class="empty-sm">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- ══ FEEDBACK ══ -->
+  <div class="view" id="view-feedback">
+    <div class="vh"><h1>Feedback & Continuous Learning</h1><p>Review history and model health.</p></div>
+    <div class="fb-pipeline">
+      <div class="fb-step"><div class="fb-icon">📥</div><h4>1. Collect</h4><p>Corrections from reviewers</p></div>
+      <div class="fb-arr">→</div>
+      <div class="fb-step"><div class="fb-icon">🔍</div><h4>2. Analyse</h4><p>Categorise failures by type</p></div>
+      <div class="fb-arr">→</div>
+      <div class="fb-step"><div class="fb-icon">🧠</div><h4>3. Improve</h4><p>Refine rules and patterns</p></div>
+      <div class="fb-arr">→</div>
+      <div class="fb-step"><div class="fb-icon">📊</div><h4>4. Enrich</h4><p>Add corrected data to training</p></div>
+      <div class="fb-arr">→</div>
+      <div class="fb-step"><div class="fb-icon">🔄</div><h4>5. Retrain</h4><p>Periodic model retraining</p></div>
+      <div class="fb-arr">→</div>
+      <div class="fb-step"><div class="fb-icon">🚀</div><h4>6. Deploy</h4><p>Roll out updated models</p></div>
+    </div>
+    <div class="card mt20">
+      <div class="card-title">Review History & Statistics</div>
+      <div id="feedbackStats"><div class="empty-sm">Loading…</div></div>
+    </div>
+    <div class="card mt20">
+      <div class="card-title">Model Health</div>
+      <div class="model-cards">
+        <div class="mc"><div class="mc-name">Tesseract v5 LSTM</div><div class="mc-ver">OCR · Printed text</div><div class="mc-acc green">Active ✓</div></div>
+        <div class="mc"><div class="mc-name">pdfplumber</div><div class="mc-ver">Native PDF + Tables + Images</div><div class="mc-acc green">Active ✓</div></div>
+        <div class="mc"><div class="mc-name">OpenCV 4.13</div><div class="mc-ver">Image preprocessing pipeline</div><div class="mc-acc green">Active ✓</div></div>
+        <div class="mc"><div class="mc-name">Regex NER</div><div class="mc-ver">14 entity types</div><div class="mc-acc green">Active ✓</div></div>
+        <div class="mc"><div class="mc-name">pdf2image</div><div class="mc-ver">PDF page rendering → PNG</div><div class="mc-acc green">Active ✓</div></div>
+        <div class="mc"><div class="mc-name">spaCy NER</div><div class="mc-ver">en_core_web_sm (optional)</div><div class="mc-acc amber">Not installed</div></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══ RESULT DETAIL MODAL ══ -->
+<div class="modal-overlay" id="resultModal" style="display:none" onclick="if(event.target===this)closeRM()">
+  <div class="modal-box large">
+    <div class="mh"><div class="mh-title" id="rmTitle">Document Result</div><button class="mh-close" onclick="closeRM()">✕</button></div>
+    <div class="rtabs">
+      <button class="rtab active" onclick="rTab('text',this)">📝 Text</button>
+      <button class="rtab" onclick="rTab('images',this)">🖼 Images</button>
+      <button class="rtab" onclick="rTab('tables',this)">📊 Tables</button>
+      <button class="rtab" onclick="rTab('entities',this)">🏷 Entities</button>
+      <button class="rtab" onclick="rTab('kv',this)">🔑 Key-Values</button>
+      <button class="rtab" onclick="rTab('json',this)">{ } JSON</button>
+      <button class="rtab" onclick="rTab('summary',this)">✨ Summary</button>
+    </div>
+    <div class="rbody" id="rmBody"></div>
+    <div class="mf">
+      <div class="mf-conf" id="rmConf"></div>
+      <div class="mf-btns" id="rmExportBtns"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ REVIEW MODAL ══ -->
+<div class="modal-overlay" id="reviewModal" style="display:none" onclick="if(event.target===this)closeReviewModal()">
+  <div class="modal-box large">
+    <div class="mh">
+      <div>
+        <div class="mh-title" id="rvmTitle">Review Document</div>
+        <div style="font-size:.78rem;color:var(--tx3);margin-top:2px" id="rvmMeta"></div>
+      </div>
+      <button class="mh-close" onclick="closeReviewModal()">✕</button>
+    </div>
+    <div class="rvm-layout">
+      <!-- Left: document preview -->
+      <div class="rvm-left">
+        <div class="rvm-section-title">Extracted Content</div>
+        <div class="rvm-tabs">
+          <button class="rvt active" onclick="rvTab('text',this)">Text</button>
+          <button class="rvt" onclick="rvTab('images',this)">Images</button>
+          <button class="rvt" onclick="rvTab('entities',this)">Entities</button>
+        </div>
+        <div class="rvm-preview" id="rvmPreview"></div>
+      </div>
+      <!-- Right: correction form -->
+      <div class="rvm-right">
+        <div class="rvm-section-title">Your Review</div>
+
+        <div class="rv-field-group">
+          <label>Reviewer Name</label>
+          <input type="text" id="rvReviewer" value="Reviewer" placeholder="Your name">
+        </div>
+
+        <div class="rv-field-group">
+          <label>Error Types Found</label>
+          <div class="rv-checks">
+            <label class="chk"><input type="checkbox" value="ocr_error"> OCR Error</label>
+            <label class="chk"><input type="checkbox" value="wrong_classification"> Wrong Classification</label>
+            <label class="chk"><input type="checkbox" value="missing_entity"> Missing Entity</label>
+            <label class="chk"><input type="checkbox" value="wrong_kv"> Wrong Key-Value</label>
+            <label class="chk"><input type="checkbox" value="table_error"> Table Error</label>
+            <label class="chk"><input type="checkbox" value="image_missing"> Image Missing</label>
+          </div>
+        </div>
+
+        <div class="rv-field-group">
+          <label>Correct Key-Values <span style="font-weight:400;color:var(--tx3)">(edit to fix)</span></label>
+          <div id="rvmKVEditor"></div>
+          <button class="btn-g" onclick="addKVRow()" style="margin-top:6px;font-size:.8rem">+ Add Field</button>
+        </div>
+
+        <div class="rv-field-group">
+          <label>Notes / Comments</label>
+          <textarea id="rvNotes" placeholder="Describe issues or corrections made…" rows="3" style="width:100%;resize:vertical;padding:8px;border:1px solid var(--bdr2);border-radius:var(--r);font-family:inherit;font-size:.84rem"></textarea>
+        </div>
+
+        <div class="rv-decision-btns">
+          <button class="btn-rv-approve" onclick="submitReview('approve')">✓ Approve</button>
+          <button class="btn-rv-correct" onclick="submitReview('correct')">✎ Approve with Corrections</button>
+          <button class="btn-rv-reject"  onclick="submitReview('reject')">✗ Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

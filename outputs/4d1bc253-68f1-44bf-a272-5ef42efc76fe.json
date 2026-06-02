@@ -1,0 +1,223 @@
+{
+  "job_id": "4d1bc253-68f1-44bf-a272-5ef42efc76fe",
+  "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe.pdf",
+  "doc_type": "Document",
+  "confidence": 35.0,
+  "metadata": {
+    "job_id": "4d1bc253-68f1-44bf-a272-5ef42efc76fe",
+    "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe.pdf",
+    "filesize": 905983,
+    "sha256": "abae2b6e6e8606feca7916e2f10b195824860c11271771918f8ed6931910e782",
+    "mimetype": "application/pdf",
+    "page_count": 3,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-06-02T09:36:40.501394",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": true,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 5,
+    "text_chars": 0,
+    "tables_count": 4
+  },
+  "key_values": {},
+  "entities": [],
+  "tables": [
+    {
+      "page": 2,
+      "title": "Table on page 2",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "title": "Table on page 2",
+      "headers": [
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "title": "Table on page 3",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "title": "Table on page 3",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "summary": "No text could be extracted from this document.",
+  "images": [
+    {
+      "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe_p1_1.png",
+      "url": "/outputs/images/4d1bc253-68f1-44bf-a272-5ef42efc76fe_p1_1.png",
+      "page": 1,
+      "width": 1466,
+      "height": 2001,
+      "caption": "",
+      "index": 1
+    },
+    {
+      "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe_p2_1.png",
+      "url": "/outputs/images/4d1bc253-68f1-44bf-a272-5ef42efc76fe_p2_1.png",
+      "page": 2,
+      "width": 798,
+      "height": 153,
+      "caption": "",
+      "index": 1
+    },
+    {
+      "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe_p2_2.png",
+      "url": "/outputs/images/4d1bc253-68f1-44bf-a272-5ef42efc76fe_p2_2.png",
+      "page": 2,
+      "width": 204,
+      "height": 197,
+      "caption": "",
+      "index": 2
+    },
+    {
+      "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe_p3_1.png",
+      "url": "/outputs/images/4d1bc253-68f1-44bf-a272-5ef42efc76fe_p3_1.png",
+      "page": 3,
+      "width": 798,
+      "height": 153,
+      "caption": "",
+      "index": 1
+    },
+    {
+      "filename": "4d1bc253-68f1-44bf-a272-5ef42efc76fe_p3_2.png",
+      "url": "/outputs/images/4d1bc253-68f1-44bf-a272-5ef42efc76fe_p3_2.png",
+      "page": 3,
+      "width": 204,
+      "height": 197,
+      "caption": "",
+      "index": 2
+    }
+  ],
+  "full_text": ""
+}

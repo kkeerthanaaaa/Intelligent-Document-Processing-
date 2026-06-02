@@ -1,0 +1,45 @@
+{
+  "job_id": "9d855a1c-9584-4af4-b8bc-46869824911f",
+  "filename": "9d855a1c-9584-4af4-b8bc-46869824911f.png",
+  "doc_type": "Document",
+  "confidence": 10.0,
+  "metadata": {
+    "job_id": "9d855a1c-9584-4af4-b8bc-46869824911f",
+    "filename": "9d855a1c-9584-4af4-b8bc-46869824911f.png",
+    "filesize": 286664,
+    "sha256": "e6de8ab8bab920476ef29780754cef304fa6410002d256702edf34cc6951ee4d",
+    "mimetype": "image/png",
+    "page_count": 1,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-06-02T09:37:38.681057",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": false,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 1
+    },
+    "images_count": 1,
+    "text_chars": 0,
+    "tables_count": 0
+  },
+  "key_values": {},
+  "entities": [],
+  "tables": [],
+  "summary": "No text could be extracted from this document.",
+  "images": [
+    {
+      "filename": "9d855a1c-9584-4af4-b8bc-46869824911f_upload.png",
+      "url": "/outputs/images/9d855a1c-9584-4af4-b8bc-46869824911f_upload.png",
+      "page": 1,
+      "width": 521,
+      "height": 682,
+      "caption": "Uploaded image",
+      "index": 1
+    }
+  ],
+  "full_text": ""
+}

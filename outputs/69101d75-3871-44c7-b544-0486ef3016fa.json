@@ -1,0 +1,301 @@
+{
+  "job_id": "69101d75-3871-44c7-b544-0486ef3016fa",
+  "filename": "69101d75-3871-44c7-b544-0486ef3016fa.pdf",
+  "doc_type": "Invoice",
+  "confidence": 72.5,
+  "metadata": {
+    "job_id": "69101d75-3871-44c7-b544-0486ef3016fa",
+    "filename": "69101d75-3871-44c7-b544-0486ef3016fa.pdf",
+    "filesize": 1991433,
+    "sha256": "e15e84c380073714a067cbc15fcecb779bc6151c198c65aaaa028c10877accbc",
+    "mimetype": "application/pdf",
+    "page_count": 11,
+    "has_native": true,
+    "is_hybrid": true,
+    "doc_type": "Invoice",
+    "processed_at": "2026-06-02T09:46:58.750626",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 18,
+    "text_chars": 6543,
+    "tables_count": 2
+  },
+  "key_values": {
+    "Invoice Number": "INV-2032-00124",
+    "Date": "June 18, 2032"
+  },
+  "entities": [
+    {
+      "text": "June 18, 2032",
+      "type": "DATE",
+      "start": 5371,
+      "end": 5384
+    },
+    {
+      "text": "June 25, 2032",
+      "type": "DATE",
+      "start": 5392,
+      "end": 5405
+    },
+    {
+      "text": "INV-2032-00124",
+      "type": "REF_NUM",
+      "start": 5330,
+      "end": 5344
+    },
+    {
+      "text": "Axport Marine Shipping Co",
+      "type": "ORG",
+      "start": 5189,
+      "end": 5214
+    },
+    {
+      "text": "Lorem Ipsum Co",
+      "type": "ORG",
+      "start": 5463,
+      "end": 5477
+    }
+  ],
+  "tables": [
+    {
+      "page": 10,
+      "title": "Table on page 10",
+      "headers": [
+        "",
+        "Description",
+        "Qty",
+        "Unit\nPrice",
+        "Amount (USD)",
+        ""
+      ],
+      "rows": [
+        [
+          "1",
+          "Ocean Freight\n– FCL 20'\nContainer",
+          "1\ncontaine\nr",
+          "$1,200.0\n0",
+          "$1,200.00",
+          "$1,200.0\n0"
+        ],
+        [
+          "2",
+          "Export\nCustoms\nClearance",
+          "1\nshipmen\nt",
+          "$90.00",
+          "$90.00",
+          "$90.00"
+        ],
+        [
+          "3",
+          "Port Handling\nFee – Origin",
+          "1\ncontaine\nr",
+          "$150.00",
+          "$150.00",
+          "$150.00"
+        ],
+        [
+          "4",
+          "Bill of Lading\nIssuance",
+          "1\ndocumen\nt",
+          "$35.00",
+          "$35.00",
+          "$35.00"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "title": "Line Items",
+      "headers": [
+        "Description",
+        "Amount (₹)"
+      ],
+      "rows": [
+        [
+          "Invoice Date: June 18, 2032 | Due: June 25,",
+          "2032"
+        ]
+      ]
+    }
+  ],
+  "summary": "This is a Invoice document. Invoice: INV-2032-00124. Dated: June 18, 2032.",
+  "images": [
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p1_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p1_1.png",
+      "page": 1,
+      "width": 287,
+      "height": 68,
+      "caption": "s from any document automatically",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p2_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p2_1.png",
+      "page": 2,
+      "width": 703,
+      "height": 1055,
+      "caption": "s each require manual reading and tedious data re-entry.",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p2_2.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p2_2.png",
+      "page": 2,
+      "width": 287,
+      "height": 68,
+      "caption": "only impossible to copy, search, or index",
+      "index": 2
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p3_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p3_1.png",
+      "page": 3,
+      "width": 309,
+      "height": 190,
+      "caption": "s from any document type.",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p3_2.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p3_2.png",
+      "page": 3,
+      "width": 309,
+      "height": 190,
+      "caption": "s & Logos",
+      "index": 2
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p3_3.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p3_3.png",
+      "page": 3,
+      "width": 309,
+      "height": 190,
+      "caption": "s, logos, and stamps",
+      "index": 3
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p3_4.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p3_4.png",
+      "page": 3,
+      "width": 287,
+      "height": 68,
+      "caption": "viewer ·",
+      "index": 4
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p4_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p4_1.png",
+      "page": 4,
+      "width": 287,
+      "height": 68,
+      "caption": "Frontend",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p5_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p5_1.png",
+      "page": 5,
+      "width": 287,
+      "height": 68,
+      "caption": "s uploader and preview",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p6_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p6_1.png",
+      "page": 6,
+      "width": 287,
+      "height": 68,
+      "caption": ", and output",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p7_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p7_1.png",
+      "page": 7,
+      "width": 723,
+      "height": 723,
+      "caption": "Extraction",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p7_2.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p7_2.png",
+      "page": 7,
+      "width": 287,
+      "height": 68,
+      "caption": "& Image Extraction",
+      "index": 2
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p8_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p8_1.png",
+      "page": 8,
+      "width": 287,
+      "height": 68,
+      "caption": "s and stamps.",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p9_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p9_1.png",
+      "page": 9,
+      "width": 418,
+      "height": 547,
+      "caption": "preprocessing and contour",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p9_2.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p9_2.png",
+      "page": 9,
+      "width": 287,
+      "height": 68,
+      "caption": "preprocessing pipeline + Tesseract OCR integration.",
+      "index": 2
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p10_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p10_1.png",
+      "page": 10,
+      "width": 287,
+      "height": 68,
+      "caption": "_extractor.py",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p11_1.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p11_1.png",
+      "page": 11,
+      "width": 703,
+      "height": 1055,
+      "caption": "+ signature extracted Vendor name,",
+      "index": 1
+    },
+    {
+      "filename": "69101d75-3871-44c7-b544-0486ef3016fa_p11_2.png",
+      "url": "/outputs/images/69101d75-3871-44c7-b544-0486ef3016fa_p11_2.png",
+      "page": 11,
+      "width": 287,
+      "height": 68,
+      "caption": "preprocessing for Database storage for persistent job",
+      "index": 2
+    }
+  ],
+  "full_text": "--- Page 1 ---\nIntelligent Document Processing System\nExtract text, tables & images from any document automatically\nFastAPI Streamlit Tesseract OCR\nOpenCV PyMuPDF pdfplumber\n--- Page 2 ---\nThe Problem\nManual document handling is slow, error-prone, and completely unscalable for modern\nworkflows.\nUnstructured Documents\nPDFs, scans, and images each require manual reading and tedious data re-entry.\nTime-Consuming\nHours spent extracting tables and text that a machine could handle in seconds.\nError-Prone\nHuman transcription introduces costly mistakes in critical financial and legal data.\nNot Searchable\nScanned PDFs are image-only impossible to copy, search, or index\nprogrammatically.\n--- Page 3 ---\nOur Solution\nOne upload. Automatic extraction of everything text, tables, and images from any document type.\nExtracted Text Tables Excel Images & Logos\nSearchable TXT + PDF output. Handles Auto-detected grid structure exported to Embedded images, logos, and stamps\nboth digital and OCR'd scanned multi-sheet XLSX files instantly. saved as PNG/JPG and viewable in the\ndocuments. dashboard.\nStructured JSON output · Downloadable from dashboard · Works on scanned & digital documents\n--- Page 4 ---\nSystem Architecture\nFrontend Streamlit\nDrag-and-drop uploader · OCR preview · Table grid · Image viewer ·\nImage Frontend\nExtractor (Streamlit) One-click downloads\nExtracts embedded Drag-and-drop\nimages uploader and preview\nBackend FastAPI\nTable HTTP REST\nTwo-tier\nExtractor\nArchitect Streamlit\nDetects and parses ure communicates with Receives files via REST, routes to the correct processor, returns\ntables backend\nresults and download links.\nBackend\nOCR Engine\n(FastAPI)\nExtracts text from Document Processor\nRoutes files to\ndocuments\nprocessors\nCentral orchestrator that fans out to OCR, table, image, and output\nsub-modules per page.\n--- Page 5 ---\nProcessing Pipeline\nEvery uploaded file passes through the same fault-tolerant 5-stage pipeline one failed page never stops the job.\n1 · Upload & Validate\n1\nFile type & size check, save to uploads/\n2 · OCR / Extract\n2\nDigital: PyMuPDF · Scanned: Tesseract + OpenCV\n3 · Table Detection\n3\npdfplumber OpenCV cell detection OCR\n4 · Image Extraction\n4\nPyMuPDF xref scan + contour detection\n5 · Output Generation\n5\nTXT · PDF · XLSX · JSON · PNG\nFault-tolerant: Each page is processed independently a single bad page is skipped with a warning, never crashing the entire job.\n--- Page 6 ---\nKey Features\nDual OCR Mode Smart Preprocessing\nDetects digital vs. scanned pages automatically. OpenCV pipeline: deskew, denoise, adaptive threshold \nPyMuPDF for digital, Tesseract for scanned. maximizes OCR accuracy on skewed scans.\n3-Tier Table Engine Logo & Image Extraction\npdfplumber OpenCV grid detection text heuristics. PyMuPDF xref extraction for PDFs. OpenCV contour\nGraceful fallback for any document type. detection for standalone images and stamps.\n5 Output Formats Fault Tolerant\nTXT, searchable PDF, Excel (multi-sheet), JSON (page- Per-page error handling. Bad pages are skipped with a\nwise), PNG all downloadable from the dashboard. warning. The job never crashes on a single failure.\n--- Page 7 ---\nTechnology Stack\nWhy This Stack?\nEvery library was chosen for production reliability and open-source\nmaturity.\nFastAPI async REST with auto-generated OpenAPI docs\nStreamlit rapid, interactive UI with zero front-end boilerplate\nTesseract 5.x LSTM-based OCR, state-of-the-art accuracy\nOpenCV 4.8 battle-tested image preprocessing and contour\ndetection\npdfplumber precise bounding-box table extraction for digital\nPDFs\n--- Page 8 ---\nProject Structure\nidp_system/ main.py\n \nbackend/\n FastAPI routes, upload handling, and download endpoints.\nmain.py\n \nconfig.py\n \nprocessors/\n ocr_engine.py ocr_engine.py\n \ntable_extractor.py\nImage preprocessing pipeline + Tesseract OCR integration.\n \nimage_extractor.py\n \noutput_generator.py\n \nutils/\n table_extractor.py\nfrontend/app.py\n \noutputs/ (6 sub-dirs)\n3-tier table detection: pdfplumber OpenCV heuristics.\n \ndocker-compose.yml\n \nrequirements.txt\ndocument_processor.py\nPipeline orchestrator with per-page fault tolerance.\nfrontend/app.py\nStreamlit dashboard with all 5 extraction & download tabs.\n--- Page 9 ---\nDemo Results Invoice\nA real company invoice PDF was processed end-to-end fields auto-extracted and ready for reuse in new invoices & e-Way Bills.\nAuto-fills new invoices Extracted data reused to generate future\ninvoices in seconds\ne-Way Bill generation Key fields like GSTIN, HSN, and amounts flow\ndirectly into e-Way Bills\nSearchable records Extracted text is indexable and easy to retrieve\nAudit-ready Structured data makes compliance checks faster\nScales easily Process hundreds of invoices at the same speed as one\nWorks on scanned docs OCR handles even non-digital or printed\ninvoices\nMulti-format output Data exported as Excel, JSON, or PDF for any\nworkflow\nFaster payments Quicker processing means fewer delays in the\nbilling cycle\n--- Page 10 ---\nDemo Results Invoice\nA real company invoice PDF was processed end-to-end fields auto-extracted and ready for reuse in new invoices & e-Way Bills.\n \nTable Excel Output Extracted Text Sample\nNo Description Qty Unit Amount (USD) Grand\nAxport Marine Shipping Co.\nPrice Total\nTax ID: 0123456789012\n1 Ocean Freight 1 $1,200.0 $1,200.00 $1,200.0\n FCL 20' containe 0 0\nInvoice No: INV-2032-00124\nContainer r\nInvoice Date: June 18, 2032 | Due: June 25, 2032\n2 Export 1 $90.00 $90.00 $90.00\nCustoms shipmen\nBill To: Lorem Ipsum Co., Ltd.\nClearance t\nAccount No: 123-4-56789-0 | VAT 7%: $126.00\n3 Port Handling 1 $150.00 $150.00 $150.00\nFee Origin containe Authorized Signatory: Michael B.\nr\n4 Bill of Lading 1 $35.00 $35.00 $35.00\nIssuance documen Company logo + signature extracted Vendor name,\nt Invoice No., line items & amounts auto-fill new invoices\n& e-Way Bills in seconds\nGrand Total $1,926.0\n0\n--- Page 11 ---\nConclusion & Future Scope\nWhat We Built Future Scope\nFull IDP pipeline in Python PDF, PaddleOCR for Hindi & regional\nJPG, JPEG, PNG script support\nDigital + scanned document LLM-powered Q&A over extracted\nhandling via dual OCR documents\n3-tier table extraction engine with Batch processing for multiple files\ngraceful fallback at once\nOpenCV image preprocessing for Database storage for persistent job\nskewed scans history\nFastAPI REST backend + Streamlit Cloud deployment on AWS / GCP\ndashboard\nREST webhook notifications &\nDocker-ready deployment out of mobile-responsive UI\nthe box\nBuilt with Python · FastAPI · Streamlit · OpenCV · Tesseract · PyMuPDF | Alliance\nUniversity"
+}

@@ -1,0 +1,81 @@
+{
+  "job_id": "82cda97d-a5c3-47c3-a55e-26ce1b9270fb",
+  "filename": "82cda97d-a5c3-47c3-a55e-26ce1b9270fb.png",
+  "doc_type": "Document",
+  "confidence": 65.0,
+  "metadata": {
+    "job_id": "82cda97d-a5c3-47c3-a55e-26ce1b9270fb",
+    "filename": "82cda97d-a5c3-47c3-a55e-26ce1b9270fb.png",
+    "filesize": 518602,
+    "sha256": "d509b1d2adacffeb19db6762b947cb7cbef970c55af1dabc917989fb02b34502",
+    "mimetype": "image/png",
+    "page_count": 1,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-05-30T09:35:55.981026",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": false,
+      "has_handwriting": true,
+      "has_text": true,
+      "region_count": 1
+    },
+    "images_count": 1,
+    "text_chars": 673,
+    "tables_count": 1
+  },
+  "key_values": {},
+  "entities": [
+    {
+      "text": "1.00.00",
+      "type": "DATE",
+      "start": 464,
+      "end": 471
+    },
+    {
+      "text": "526339",
+      "type": "PINCODE",
+      "start": 659,
+      "end": 665
+    }
+  ],
+  "tables": [
+    {
+      "page": 1,
+      "title": "Line Items",
+      "headers": [
+        "Description",
+        "Amount (₹)"
+      ],
+      "rows": [
+        [
+          "Date Mar",
+          "2005"
+        ],
+        [
+          "A wa Feat ach ont 250-",
+          "25090"
+        ],
+        [
+          "ofa ues “aeunk O0e",
+          "526339"
+        ]
+      ]
+    }
+  ],
+  "summary": "This is a Document document. Ne LUMBER and CONSTRUCTION SUPPLY, INC. Sold to M_ Checked by _/ Busnes Ste _ ona cone Adiress_ landaw/ (Marikina | recs…",
+  "images": [
+    {
+      "filename": "82cda97d-a5c3-47c3-a55e-26ce1b9270fb_upload.png",
+      "url": "/outputs/images/82cda97d-a5c3-47c3-a55e-26ce1b9270fb_upload.png",
+      "page": 1,
+      "width": 479,
+      "height": 549,
+      "caption": "Uploaded image",
+      "index": 1
+    }
+  ],
+  "full_text": "--- Page 1 ---\nNe LUMBER and CONSTRUCTION SUPPLY, INC.\n\nCire NO 11473\n\nDate Mar 2005\n Sold to M_ Checked by _/\n\nBusnes Ste _ ona cone\n Adiress_ landaw/ (Marikina | recs\nOSCAPWD ID No, _ SPMD Sie.\n\nUnit\n\nP| Ve | baby rn | ree | ARB\ngas] peda ashicrawt Cah) | 600- | G,c00-00\n\n1 [Ow BS Sanding Sealer 606- 606.00\n\no | Zo Cher] alags Tacg. 630- 630.00\n\nT [a T Kacg iano 48S 48500\n\n4 Titer |» deal 0 qi 2a- 2.0000\nA wa Feat ach ont 250- 25090\n2 | Pe Fant brush. 2 S0- 1.00.00\n\nT ito Cotten waste ® S- 00\nZz Yas, 3m. 8. Paper * 1p | Total Sales WaT Incusve) 215 43000\n\ni WPS. 0 1G | Lessa (S ;\nii er is\n Exempt Sales i 7 | LessiSCrPWD Discount =\nofa ues aeunk O0e 526339\n\n7a VAT"
+}

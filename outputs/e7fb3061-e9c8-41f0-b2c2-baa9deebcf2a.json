@@ -1,0 +1,119 @@
+{
+  "job_id": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a",
+  "filename": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a.pdf",
+  "doc_type": "Document",
+  "confidence": 65.0,
+  "metadata": {
+    "job_id": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a",
+    "filename": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a.pdf",
+    "filesize": 716654,
+    "sha256": "ca43e1c6ef0df40aac7de69051bc0d02bb6629a9bc355904e931efc124b3ca26",
+    "mimetype": "application/pdf",
+    "page_count": 2,
+    "has_native": true,
+    "is_hybrid": true,
+    "doc_type": "Document",
+    "processed_at": "2026-05-29T08:02:44.859682",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 2,
+    "text_chars": 3941,
+    "tables_count": 1
+  },
+  "key_values": {
+    "Email": "enquiry@alliance.edu.in",
+    "Phone": "7483115023"
+  },
+  "entities": [
+    {
+      "text": "enquiry@alliance.edu.in",
+      "type": "EMAIL",
+      "start": 2437,
+      "end": 2460
+    },
+    {
+      "text": "au@alliance.edu",
+      "type": "EMAIL",
+      "start": 2462,
+      "end": 2477
+    },
+    {
+      "text": "7483115023",
+      "type": "PHONE",
+      "start": 359,
+      "end": 369
+    },
+    {
+      "text": "September 04, 2024",
+      "type": "DATE",
+      "start": 183,
+      "end": 201
+    },
+    {
+      "text": "September 26, 2024",
+      "type": "DATE",
+      "start": 3824,
+      "end": 3842
+    },
+    {
+      "text": "560068",
+      "type": "PINCODE",
+      "start": 344,
+      "end": 350
+    }
+  ],
+  "tables": [
+    {
+      "page": 1,
+      "title": "Line Items",
+      "headers": [
+        "Description",
+        "Qty",
+        "Rate (₹)",
+        "Amount (₹)"
+      ],
+      "rows": [
+        [
+          "Central Campus: Chikkahagade Cross, Chandapura-Anekal Main Road. Anekal. Bengalur1 -. 562 106. Kamataka. India. Tel.: +91 80 4619 9000 9100 /4129 9200 | Fax: +91",
+          "80",
+          "4619",
+          "9099"
+        ],
+        [
+          "City Canpus 2: 2dCross, 36 Main, Dollars Scheme, BTM 1 Stage. Bengaluru -560 068, Karnataka, India. Tel.: +91 80 2668 1444 /4365 Fax: +91",
+          "80",
+          "2678",
+          "2048"
+        ]
+      ]
+    }
+  ],
+  "summary": "This is a Document document. Email: enquiry@alliance.edu.in.",
+  "images": [
+    {
+      "filename": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a_p1_1.png",
+      "url": "/outputs/images/e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a_p1_1.png",
+      "page": 1,
+      "width": 1129,
+      "height": 1651,
+      "caption": "graphs (latest) -6 Nos. (Passport size color)",
+      "index": 1
+    },
+    {
+      "filename": "e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a_p2_1.png",
+      "url": "/outputs/images/e7fb3061-e9c8-41f0-b2c2-baa9deebcf2a_p2_1.png",
+      "page": 2,
+      "width": 1275,
+      "height": 1603,
+      "caption": "Extracted image — page 2",
+      "index": 1
+    }
+  ],
+  "full_text": "--- Page 1 ---\nALL AN ALLIANCE\nNIVERSIT Y\nPrivate Univwrsity established in Karnataka State by Act No. 34 of ycar 2010\nRecognized by the University Grants Commisston (UGC). New Delhi\nSeptember 04, 2024\nMr. AKASH T\n'# 04 C/ BG URUMURTY BESCOM METER READER\n13TH A MAIN VENKATESHWARA LAYOUT\nOLD MADIWALA\nKARNATAKAB ENGALURU URBAN\nBENGALURU URBAN -560068\nMobile: 7483115023\nDear Mr. AKASH T,\nRef.: Form No. AU/UG/24/22963\nSub: Provisional Admission Offer: Bachelor of Technology (B. Tech.)- 2024-2028 at Alliance\nUniversity.\nCongratulations!\nOn behalf of the Admissions Committee, and the Dean, Alliance College of Engineering and Design,\nAlliance University, it is my distinct pleasure to offer you provisional admission to the Bachelor of\nTechnology (B. Tech.) Artificial Intelligence and Machine,Learning programme for the batch of\n2024-28.\nAlliance University is a Private University established in Karnataka State by Act No.34 and is\nrecognized by the University Grants Commission (UGC), New Delhi. The University has secured an\noverall rating of Diamond in the QS-I GAUGE Indian University Rating System 2023 and is ranked\namong the Top 19% of Universities in South Asia according to the QS World University Rankings\n2024.\nAs a student at this renowned University, you will interact with outstanding faculty and students\nin ac lose-knit setting adding a differentiation value to your portfolio and gaining access to a\nnetwork of leaders across industries to help you grow professionally.\nPlease note that your admission confirmation is contingent upon your fulfilling the following:\n1 You should have passed 10+2 examination with Physics and Mathematics as compulsory\nsubjects along with one of the Chemistry/Biotechnology/Biology/Technical Vocational\nsubjects, obtained at least 45% marks (40% in case of candidate belonging to reserved\ncategory) in the above subjects taken together.\n2 You must have qualified in KCET, Admission Order (Original) to be submitted.\nangalote\nCentral Campus: Chikkahagade Cross, Chandapura-Anekal Main Road. Anekal. Bengalur1 -. 562 106. Kamataka. India. Tel.: +91 80 4619 9000 9100 /4129 9200 | Fax: +91 80 4619 9099\nCity Canpus 2: 2dCross, 36 Main, Dollars Scheme, BTM 1 Stage. Bengaluru -560 068, Karnataka, India. Tel.: +91 80 2668 1444 /4365 Fax: +91 80 2678 2048\nCity Campus 1: 19h Cross, 7h Main, NS Palya, BTM 2n4 Stage. Bengaluru -560 076. Karmataka, India. Tel.: +91 80 2678 9749 / 6021\nEmail: enquiry@alliance.edu.in, au@alliance.edu. in | URL: www.alliance.edu.in\n--- Page 2 ---\nPlease refer tot he attached Fees Structure and Payment Schedule for B. Tech 2024-28.\n3\nYoua re required to pay the fees as per the fee payment schedule.\nYou must submit the following documents in original at the time of student onboarding:\n4\nX Marks Card\nXIl Marks Card\nAdmission Order\nTransfer Certificate\nMigration Certificate\nEntrance Exam Score Card\nPhotographs (latest) -6 Nos. (Passport size color)\nP s r u e le g b a i m s s t e i r t a n a t o n io y t n e o f t f e h t e a h t w e i o a n u b t l o d h v e e b e e d v o fo e c n r u f t m e i o e t f e n d y t . s o , I u n y r o s h u u a c r v h a i d n a m g n i f e s u v s r i e n o n i n s t, h w n e o o d u f l a u d n r y a th u i e t n o r a m c c o c a r u ti r r c e a a s t l p e l y o i n n s d t f a o e n r n m d c e a c t a o i n o r c n d e i l o s l c r e u d f s , a s i a i l n o u d n re t h t w o e il\nbe entertained.\nI m t e i n s t a i d o v n i e s d a b i l n e t f h o e r A a n ll n B e . x T u e r c e h 1 . s o t f u d th e e n t a s t t t a o c h c m ar e ry n t t . h e P i l r e a o s w e n m l a a k p e t o t p h s e w n i e t c h e s s s p a e r c y i fi a c r a r t a i n o g n e s m th e a n t t s a r t e o\navoid disruptions in your studies.\nThe classes for the B. Tech programme will commence on September 26, 2024.\nWelcome to Alliance University!\nWith be7t wishes,\nOffice of Admissions\nongalo\nAlliance University"
+}

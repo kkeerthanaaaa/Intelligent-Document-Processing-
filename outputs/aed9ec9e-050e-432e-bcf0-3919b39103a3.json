@@ -1,0 +1,142 @@
+{
+  "job_id": "aed9ec9e-050e-432e-bcf0-3919b39103a3",
+  "filename": "aed9ec9e-050e-432e-bcf0-3919b39103a3.pdf",
+  "doc_type": "Document",
+  "confidence": 28.6,
+  "metadata": {
+    "job_id": "aed9ec9e-050e-432e-bcf0-3919b39103a3",
+    "filename": "aed9ec9e-050e-432e-bcf0-3919b39103a3.pdf",
+    "filesize": 404849,
+    "sha256": "cf3ae071c4623610ddbbfe22ee3113c37a55344e4014fd3a8b4682805ad3996b",
+    "mimetype": "application/pdf",
+    "page_count": 1,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-06-02T09:37:36.345335",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": true,
+      "has_images": true,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 2,
+    "text_chars": 0,
+    "tables_count": 2
+  },
+  "key_values": {},
+  "entities": [],
+  "tables": [
+    {
+      "page": 1,
+      "title": "Table on page 1",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "title": "Table on page 1",
+      "headers": [
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "summary": "No text could be extracted from this document.",
+  "images": [
+    {
+      "filename": "aed9ec9e-050e-432e-bcf0-3919b39103a3_p1_1.png",
+      "url": "/outputs/images/aed9ec9e-050e-432e-bcf0-3919b39103a3_p1_1.png",
+      "page": 1,
+      "width": 798,
+      "height": 153,
+      "caption": "",
+      "index": 1
+    },
+    {
+      "filename": "aed9ec9e-050e-432e-bcf0-3919b39103a3_p1_2.png",
+      "url": "/outputs/images/aed9ec9e-050e-432e-bcf0-3919b39103a3_p1_2.png",
+      "page": 1,
+      "width": 204,
+      "height": 197,
+      "caption": "",
+      "index": 2
+    }
+  ],
+  "full_text": ""
+}

@@ -1,0 +1,54 @@
+{
+  "job_id": "4e4ca9b7-7d3d-4c36-8510-b671f741cd1b",
+  "filename": "4e4ca9b7-7d3d-4c36-8510-b671f741cd1b.jpg",
+  "doc_type": "Document",
+  "confidence": 35.0,
+  "metadata": {
+    "job_id": "4e4ca9b7-7d3d-4c36-8510-b671f741cd1b",
+    "filename": "4e4ca9b7-7d3d-4c36-8510-b671f741cd1b.jpg",
+    "filesize": 144752,
+    "sha256": "bcc6ba5d3c08db7cb2be048a8523647ef25d532aa75a0f8acd3b55334beb0a1b",
+    "mimetype": "image/jpeg",
+    "page_count": 1,
+    "has_native": false,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-05-29T08:05:11.339424",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": false,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 1
+    },
+    "images_count": 1,
+    "text_chars": 1151,
+    "tables_count": 0
+  },
+  "key_values": {
+    "Student Name": "ANMINS RI GM oscommerce\nSATS NOvcesisntns"
+  },
+  "entities": [
+    {
+      "text": "9.6.00",
+      "type": "DATE",
+      "start": 499,
+      "end": 505
+    }
+  ],
+  "tables": [],
+  "summary": "This is a Document document. Student: ANMINS RI GM oscommerce\nSATS NOvcesisntns.",
+  "images": [
+    {
+      "filename": "4e4ca9b7-7d3d-4c36-8510-b671f741cd1b_upload.png",
+      "url": "/outputs/images/4e4ca9b7-7d3d-4c36-8510-b671f741cd1b_upload.png",
+      "page": 1,
+      "width": 1163,
+      "height": 1600,
+      "caption": "Uploaded image",
+      "index": 1
+    }
+  ],
+  "full_text": "--- Page 1 ---\nBANGALORE METROPOLITAN TRANSPORT CORPORATION\n(Students Bus Pass Application)\nTo be filled in Block letters\nStudent Name: ANMINS RI GM oscommerce\nSATS NOvcesisntnssesestoneansererseassneasennaninsnsbtbrereneeesusensene\n00818108. 1.2006 cender: MALE... mea\nCategory: GM/Other (OBC)/SC/SToim. 1. PB. Co ccosoosee 4,\nsD Pf ee\nPresent residential address:.. WO.O.4. 1 nS. Vv (2; Laer Ke\nENKATESHWAR y ee Li ht)\nDoor w.MAINNE ee rect: AO as = (Steeana\n+N x\nLocality: OLD... MADTWALin code:.9.6.00.68. erga \nFather Name: THEERTAHESH. AK ssrmee oe Contact Tel.No: DHISINS 023\nMother name. MAMATAA st 8.\nAre you staying in Hostel: Yes[__] No: Me]\nIf yes, Hostel Address ----------------------------\nAre you staying in residential School: Yes[_ | No ey\nES ccccooncoces TEC ITERTTORA OTS TOE PR. con ccoccnccaxaeescoos coset a eeetocene\noO a\nSignaturéof Parent/Guardian Stuciént s Signature\nThe above information furnished by the student studying in the academic year 2025-26 in our Institution is\ntrue as per our record.\n» vO\n5 Z\\e den gy]\nStudent's Registration No: Signature c Head of thé « Rew *\nDYHIWOWOG }2U49 Institution wit! seal & Date CS"
+}

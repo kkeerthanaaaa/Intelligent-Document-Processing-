@@ -1,0 +1,42 @@
+{
+  "job_id": "1c49612c-941f-4fc0-abba-fcb5318d48d0",
+  "filename": "1c49612c-941f-4fc0-abba-fcb5318d48d0.pdf",
+  "doc_type": "Document",
+  "confidence": 35.0,
+  "metadata": {
+    "job_id": "1c49612c-941f-4fc0-abba-fcb5318d48d0",
+    "filename": "1c49612c-941f-4fc0-abba-fcb5318d48d0.pdf",
+    "filesize": 94168,
+    "sha256": "0a181b07effe3de4879f7b7b7a158e4adeb4f16414cc5712a1fb8a06e6d7cf75",
+    "mimetype": "application/pdf",
+    "page_count": 2,
+    "has_native": true,
+    "is_hybrid": false,
+    "doc_type": "Document",
+    "processed_at": "2026-06-02T09:54:22.260038",
+    "ocr_engine": "tesseract-5.3.4-multipass",
+    "layout": {
+      "has_tables": false,
+      "has_images": false,
+      "has_handwriting": false,
+      "has_text": true,
+      "region_count": 0
+    },
+    "images_count": 0,
+    "text_chars": 4095,
+    "tables_count": 0
+  },
+  "key_values": {},
+  "entities": [
+    {
+      "text": "Dr. Vishnu\nPrasad",
+      "type": "PERSON",
+      "start": 71,
+      "end": 88
+    }
+  ],
+  "tables": [],
+  "summary": "This is a Document document. AI in Consumer Behavior, Marketing & Digital Ecosystems Dr. Vishnu I have always been someone who asks \"why does this work the way it does?\" and that curiosity is honestly what brought me to this research theme. Every time I open an app and see a product recommendation that feels oddly accurate, or …",
+  "images": [],
+  "full_text": "--- Page 1 ---\nAI in Consumer Behavior, Marketing & Digital Ecosystems Dr. Vishnu\nPrasad\nI have always been someone who asks \"why does this work the way it does?\" and that\ncuriosity is honestly what brought me to this research theme. Every time I open an app and\nsee a product recommendation that feels oddly accurate, or notice how my social media feed\nseems to know what I am thinking before I do, I find myself wanting to understand the\nsystem behind it. Not just technically, but behaviorally. Why does it work on people? How\nsdoes it influence what we buy, what we believe, or what we pay attention to? These\nquestions genuinely excite me, and they are the reason I chose AI in Consumer Behavior,\nMarketing and Digital Ecosystems as my area of interest.\nI am currently in my third year of a B. Tech in Computer Science Engineering, specializing in\nArtificial Intelligence and Machine Learning. My coursework has given me a working\nunderstanding of machine learning algorithms, data structures, and statistical thinking. I have\nbeen steadily building hands-on skills in Python, and I work regularly with libraries like\nNumPy, Pandas, and Scikit-learn for data handling and analysis. But what my academic\njourney has also taught me is that knowing how to build a model is only half the picture. The\nmore interesting question is what that model is actually doing to real people in real situations\n and consumer behavior is one of the richest places to explore that.\nWhat drew me specifically to this theme is how interdisciplinary it is. It is not purely a\nmachine learning problem, and it is not purely a psychology or marketing problem either. It\nsits right in the middle, and that is what makes it intellectually demanding in a way I\ngenuinely enjoy. Understanding consumer behavior through AI means you have to think\nabout data science, human motivation, digital design, and ethics all at once. That kind of\nlayered thinking is something I actively look for in the problems I choose to work on.\nOne experience that shaped my thinking in this direction was a project I worked on involving\nan AI healthcare assistant. I spent a lot of time exploring how AI agents process user inputs,\nretain context, and explain their reasoning in ways that feel trustworthy. Healthcare and\nconsumer behavior are different domains, but the underlying dynamic is quite similar in\nboth cases, you are building a system that needs to understand human needs, respond\nmeaningfully, and maintain the user's trust over time. That project pushed me to think\ncarefully about the relationship between AI decision-making and human behavior, which I\n--- Page 2 ---\nnow see as directly relevant to how recommendation systems and personalization engines\nfunction in commercial digital ecosystems.\nOutside of coursework and projects, I spend a fair amount of time reading about how major\nplatforms approach personalization, how e-commerce companies use behavioral data to\nimprove conversion, and what the ongoing debates around algorithmic transparency and data\nethics actually involve. I do not just find this interesting from a technical perspective I find\nit important. AI systems that influence consumer choices at scale carry real responsibility, and\nI want to work in a research environment where that responsibility is taken seriously.\nWhat I am looking for in this internship is the opportunity to develop more rigorous research\nhabits reading academic literature critically, working with behavioral datasets in a\nstructured way, and learning how to frame research questions that are both technically\ngrounded and practically meaningful. I know I am still building expertise in several areas,\nand I want to be straightforward about that. But I am a fast learner who is genuinely\nmotivated by this subject, and I am prepared to put in the work that serious research demands.\nThis theme connects everything I care about in AI the technical depth, the human\ndimension, and the broader question of what these systems mean for society. That is why I\nchose it, and that is why I am enthusiastic about contributing to it."
+}
