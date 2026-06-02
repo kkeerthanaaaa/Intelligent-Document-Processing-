@@ -15,7 +15,8 @@
 ### Upload & Live Pipeline View
 <!-- SCREENSHOT 1: Take this from the Processing page while a document is running -->
 <!-- Show the pipeline stages turning green one by one — this is the most impressive visual -->
-![Pipeline Processing]("C:\Users\keert\Downloads\search and chat.jpeg")
+![Pipeline Processing](<img width="1909" height="909" alt="search and chat" src="https://github.com/user-attachments/assets/d0c99c77-cb88-46d2-9733-cd43f3d1696f" />)
+
 
 ### Results Dashboard — Extracted Text, Tables, Key-Values
 <!-- SCREENSHOT 2: Take this from the Results page with a real invoice or structured document -->
