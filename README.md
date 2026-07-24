@@ -19,10 +19,6 @@
 
 ---
 
-Co-authored-by: Akash T <theerthakash13@gmail.comL>
-
----
-
 ## 🎯 What It Does
 
 IDP Studio is a production-grade document processing system that turns unstructured PDFs and scanned images into clean, structured, queryable data — entirely on local hardware. Built for analysts, developers, and enterprises that need document intelligence without sending sensitive data to third-party APIs.
