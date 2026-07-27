@@ -19,7 +19,7 @@
 
 ---
 
-Co-authored by : Akash T
+Co-authored by : Akash T <theerthakash2006@gmail.com>
 
 ---
 
