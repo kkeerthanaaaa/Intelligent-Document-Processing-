@@ -19,7 +19,7 @@
 
 ---
 
-Co-authored by : Akash T <theerthakash2006@gmail.com>
+Co-authored-by: Akash T <theerthakash2006@gmail.com>
 
 ---
 
@@ -61,7 +61,7 @@ IDP Studio is a production-grade document processing system that turns unstructu
 <img width="1909" height="914" alt="processing" src="https://github.com/user-attachments/assets/8aa0c592-f66e-475b-8e23-94501fec8032" />
 
 
-
+ 
 ---
 
 ### Analytics Dashboard
@@ -117,12 +117,12 @@ IDP Studio is a production-grade document processing system that turns unstructu
 **Image preprocessing pipeline (OpenCV):**
 ```
 Raw Image → Grayscale → Deskew → Binarize (Otsu) → Tesseract LSTM → Text + Confidence
->>>>>>> 911b813536a4c2a0c615165a1f2f75ad99c9f6ba
+
 ```
 
 ---
 
-<<<<<<< HEAD
+
 ## Quick Start
 
 ### 1. Install system dependencies (Ubuntu/Debian)
@@ -130,7 +130,7 @@ Raw Image → Grayscale → Deskew → Binarize (Otsu) → Tesseract LSTM → Te
 ## License
 
 Enterprise · DocIntel v2.4.1
-=======
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology | Why |
