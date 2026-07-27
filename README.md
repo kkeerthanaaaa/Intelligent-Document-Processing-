@@ -57,7 +57,7 @@ IDP Studio is a production-grade document processing system that turns unstructu
 <img width="1909" height="914" alt="processing" src="https://github.com/user-attachments/assets/8aa0c592-f66e-475b-8e23-94501fec8032" />
 
 
-
+ 
 ---
 
 ### Analytics Dashboard
